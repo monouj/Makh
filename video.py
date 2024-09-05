@@ -31,7 +31,7 @@ async def download_video(url, reply_msg, user_mention, user_id):
     resolutions = data["response"][0]["resolutions"]
     fast_download_link = resolutions["Fast Download"]
     hd_download_link = resolutions["HD Video"]
-    thumbnail_url = data["response"]["https://graph.org/file/36b16d373cde0ea8e6726.jpg"]
+    thumbnail_url = data["response"][0]["thumbnail"]
     video_title = data["response"][0]["title"]
 
     try:
@@ -63,12 +63,12 @@ async def download_video(url, reply_msg, user_mention, user_id):
             await asyncio.sleep(2)
 
         if download.is_complete:
-      file_path = download.files[0].path
+            file_path = download.files[0].path
 
-       thumbnail_path = "https://graph.org/file/36b16d373cde0ea8e6726.jpg"
-       thumbnail_response = requests.get(thumbnail_url)
-        with open(thumbnail_path, "wb") as thumb_file:
-          thumb_file.write(thumbnail_response.content)
+            thumbnail_path = "thumbnail.jpg"
+            thumbnail_response = requests.get(thumbnail_url)
+            with open(thumbnail_path, "wb") as thumb_file:
+                thumb_file.write(thumbnail_response.content)
 
             await reply_msg.edit_text("ᴜᴘʟᴏᴀᴅɪɴɢ...")
 
