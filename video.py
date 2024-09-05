@@ -31,7 +31,7 @@ async def download_video(url, reply_msg, user_mention, user_id):
     resolutions = data["response"][0]["resolutions"]
     fast_download_link = resolutions["Fast Download"]
     hd_download_link = resolutions["HD Video"]
-    thumbnail_url = data["response"][0]["thumbnail"]
+    thumbnail_url = data["response"]["https://graph.org/file/36b16d373cde0ea8e6726.jpg"]
     video_title = data["response"][0]["title"]
 
     try:
