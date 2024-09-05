@@ -63,7 +63,12 @@ async def download_video(url, reply_msg, user_mention, user_id):
             await asyncio.sleep(2)
 
         if download.is_complete:
-            file_path = download.files[0].path
+      file_path = download.files[0].path
+
+       thumbnail_path = "https://graph.org/file/36b16d373cde0ea8e6726.jpg"
+       thumbnail_response = requests.get(thumbnail_url)
+        with open(thumbnail_path, "wb") as thumb_file:
+          thumb_file.write(thumbnail_response.content)
 
             await reply_msg.edit_text("ᴜᴘʟᴏᴀᴅɪɴɢ...")
 
