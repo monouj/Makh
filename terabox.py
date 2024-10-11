@@ -98,7 +98,7 @@ async def handle_message(client, message: Message):
     valid_domains = [
     'terabox.com', 'nephobox.com', '4funbox.com', 'mirrobox.com', 
     'momerybox.com', 'teraboxapp.com','teraboxlink.com', '1024tera.com', 
-    'terabox.app', 'gibibox.com', '1024terabox.com', 'goaibox.com', 'terasharelink.com'
+    'terabox.app', 'gibibox.com', 'terafileshare.com', '1024terabox.com', 'goaibox.com', 'terasharelink.com'
     ]
 
     terabox_link = message.text.strip()
