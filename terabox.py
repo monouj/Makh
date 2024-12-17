@@ -91,5 +91,4 @@ async def handle_message(client, message: Message):
         await message.reply_text("Failed to retrieve the stream URL. Please check the TeraBox link.")
 
 if __name__ == "__main__":
-    keep_alive()
     app.run()
