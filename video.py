@@ -24,7 +24,7 @@ aria2.set_global_options(options)
 
 
 async def download_video(url, reply_msg, user_mention, user_id):
-    response = requests.get(f"https://wdzone-terabox-api.vercel.app/api?url={url}")
+    response = requests.get(f"https://wdzone-terabox-api.vercel.app?url={url}")
     response.raise_for_status()
     data = response.json()
 
