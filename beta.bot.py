@@ -5,13 +5,13 @@ import re
 import aiohttp  # Using aiohttp for async HTTP requests  
 from web import keep_alive  
 
-BOT_TOKEN = "7289544815:AAHzaQ9RGp6QwPFxynzZBozQTSV3y_vCSok"  
+BOT_TOKEN = "7334566762:AAFTDty0k5zUhKqmy5H24LurCtGqF-OXbK4"  
 BASE_URL = "https://opabhik.serv00.net/Watch.php?url="  
 DOWNLOAD_BASE = "https://teradlrobot.cheemsbackup.workers.dev/?url="  
 TERABOX_PATTERN = r"https?://(?:\w+\.)?(terabox|1024terabox|freeterabox|teraboxapp|tera|teraboxlink|mirrorbox|nephobox|1024tera|momerybox|tibibox|terasharelink|teraboxshare|terafileshare)\.\w+"  
-LOG_CHANNEL_ID = "-1001564742493"  # Replace with your actual log channel's ID  
-FSUB_CHANNEL_ID = "-1002307703150"  # Replace with your force subscription channel ID  
-FSubLink = "https://t.me/+FIWD86r0LiRlMzll"  # Replace with your actual channel link  
+LOG_CHANNEL_ID = "-1002449524486"  # Replace with your actual log channel's ID  
+FSUB_CHANNEL_ID = "-1002574388477"  # Replace with your force subscription channel ID  
+FSubLink = "https://t.meam_films"  # Replace with your actual channel link  
 
 async def check_subscription(user_id, bot):  
     """Check if a user is a member of the required channel."""  
@@ -39,7 +39,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     image_url = "https://envs.sh/rhi.jpg"  # Replace with your desired image URL  
 
-    button = InlineKeyboardButton("✨ Join Channel", url="https://t.me/+Q8sRUuL-hzUwZGM1")  
+    button = InlineKeyboardButton("✨ Join Channel", url="https://t.me/am_films")  
     reply_markup = InlineKeyboardMarkup([[button]])  
 
     await update.message.reply_photo(  
